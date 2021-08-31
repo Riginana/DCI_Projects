@@ -3,7 +3,28 @@
   margin: 0;
   padding: 0;
 }
+.formUrl {
+  display: flex;
+  flex-direction: column;
+  width: 26rem;
+}
+.formUrl input {
+  padding: 10px;
+  margin: 5px;
+  font-size: 20px;
+  border: 1px solid lightgray;
+}
 
+.urlButton {
+  height: 5vh;
+  background-color: #58a9a5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 25px 0;
+}
 .App-header header {
   border-bottom: 1px solid lightgray;
   display: flex;
@@ -40,6 +61,9 @@ h1 {
 .logo {
   display: flex;
   width: 10%;
+  height: 5vh;
+  align-items: center;
+  margin: auto 10px;
 }
 
 .menu {
@@ -69,16 +93,16 @@ h1 {
   padding: 10px;
 }
 
-input,
-label,
-button {
+.loginForm input,
+.loginForm label,
+.LoginButton {
   padding: 10px;
   margin: 5px;
   font-size: 20px;
   color: grey;
   border: none;
 }
-button {
+.LoginButton {
   margin-top: 50px;
   background-color: #58a9a5;
   color: white;
@@ -87,7 +111,7 @@ button {
   border-radius: 5px;
 }
 
-input {
+.loginForm input {
   border-bottom: 2px solid #58a9a5;
   background: transparent;
 }
@@ -99,122 +123,177 @@ input {
   height: 70vh;
   margin: 20px auto;
   justify-content: space-between;
+  align-items: center;
 }
 .textAndImage {
-  width: 100%;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
   margin-bottom: 50px;
+  height: 55vh;
+  margin-top: 20px;
 }
+
 .card-text {
-  width: 390px;
-  height: 300px;
-  background-color: white;
-  margin: 10px auto;
-  text-align: center;
+  width: 26rem;
+  height: 26vh;
+  padding: 10px;
+  line-height: 30px;
+  margin: 20px auto;
 }
 .title {
-  font-size: 30px;
+  width: 100%;
+  font-size: 25px;
   font-weight: bold;
-  margin: 20px 15px;
+  text-align: center;
+  height: 6vh;
 }
 .text {
-  line-height: 28px;
-  margin: 20px 15px;
+  margin-top: 10px;
+  width: 100%;
+  height: 11vh;
+  text-align: center;
 }
 .link {
-  display: flex;
-  justify-content: center;
+  margin-top: 10px;
+  width: 50%;
+  height: 5vh;
+  margin: 10px auto;
 }
 .link button {
-  width: 150px;
-  height: 40px;
-  border-radius: 5px;
+  height: 100%;
+  width: 100%;
   background-color: #58a9a5;
-  border: none;
   color: white;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 35px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
 }
-button a{
+.card-image {
+  margin: 20px auto;
+  width: 26rem;
+  height: 16rem;
+}
+
+.card-image img {
+  width: 100%;
+  height: 16rem;
+  background-image: cover;
+}
+
+button a {
   text-decoration: none;
   color: white;
 }
-.card-image {
-  width: 390px;
-  height: 300px;
-  margin: 10px auto;
-}
-.image {
-  width: 100%;
-  height: 100%;
-}
-.card-image img {
-  width: 100%;
-  height: 100%;
-}
+
 @media screen and (min-width: 800px) {
-  .content {
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 7rem;
+  .formUrl {
+    width: 48rem;
+    height: 6vh;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .formUrl input {
+    width: 80%;
+    margin-left: 20px;
+  }
+  .urlButton {
+    width: 20%;
+    margin-top: 5px;
   }
   .textAndImage {
-    display: flex;
     flex-direction: row;
-    margin-bottom: 50px;
-    /* border: 1px solid rgb(235, 235, 235); */
+    width: 48rem;
+    height: 45vh;
+  }
+  .content {
+    height: 90vh;
+    width: 100%;
   }
   .card-text {
-    width: 450px;
-    height: 350px;
-    font-size: 20px;
-    margin-right: 10px;
-    text-align: left;
-  }
-  .card-image {
-    width: 450px;
-    height: 350px;
-    /* margin-right: 15px; */
+    width: 50%;
+    margin: 0;
+    height: 100%;
   }
   .title {
-    font-size: 35px;
-    margin-top: 0;
+    font-size: 28px;
+    padding: 0px 10px;
+    text-align: left;
   }
   .text {
-    line-height: 30px;
+    text-align: justify;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 18px;
   }
   .link {
-    justify-content: left;
-    margin-left: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
+    position: absolute;
+    width: 24rem;
   }
-  .menu ul li a {
+  .link button {
+    position: relative;
+    top: 210%;
+    width: 50%;
+    background-color: #58a9a5;
+    justify-content: flex-start;
+  }
+  .link button:hover {
+    font-weight: bold;
     font-size: 20px;
+  }
+
+  .card-image {
+    width: 50%;
+    margin: 0;
+    height: 100%;
+  }
+
+  .card-image img {
+    height: 100%;
   }
 }
 @media screen and (min-width: 1000px) {
-  .content {
-    justify-content: center;
-    margin-top: 10rem;
+  .formUrl {
+    width: 60rem;
+    height: 6vh;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
-  .card-text {
-    width: 550px;
-    height: 400px;
+  .formUrl input {
+    width: 78%;
   }
-  .card-image {
-    width: 550px;
-    height: 400px;
+  .urlButton {
+    width: 20%;
+    margin-top: 5px;
+  }
+  .textAndImage {
+    flex-direction: row;
+    width: 60rem;
   }
   .title {
-    font-size: 40px;
-    line-height: 45px;
+    font-size: 33px;
+    line-height: 39px;
+    padding: 0px 15px;
   }
   .text {
-    line-height: 43px;
+    text-align: left;
+    padding: 15px;
+    margin-top: 25px;
+    font-size: 19px;
+    line-height: 35px;
+  }
+
+  .link {
+    margin-left: 15px;
   }
   .link button {
-    margin-top: 60px;
+    position: relative;
+    top: 190%;
+    width: 50%;
+
+    background-color: #58a9a5;
   }
 }

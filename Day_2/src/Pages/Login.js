@@ -3,18 +3,13 @@ import React, { useState } from "react";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  function validateForm() {
-    return email.length > 0 && password.length > 0;
-    
-  }
 
   function handleSubmit(event) {
     event.preventDefault();
   }
-  function handleSubmit() {}
   return (
     <div className="login">
-      <form onSubmit={handleSubmit} action="">
+      <form className="loginForm" onSubmit={handleSubmit} action="">
         <label for="email">Email</label>
         <input
           type="email"
@@ -29,7 +24,7 @@ function Login() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit" disabled={!validateForm()}>
+        <button className="LoginButton" type="submit">
           Send
         </button>
       </form>
