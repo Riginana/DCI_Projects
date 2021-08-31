@@ -136,6 +136,10 @@ input {
   cursor: pointer;
   margin-top: 35px;
 }
+button a{
+  text-decoration: none;
+  color: white;
+}
 .card-image {
   width: 390px;
   height: 300px;
