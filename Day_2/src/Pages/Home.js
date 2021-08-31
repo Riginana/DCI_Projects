@@ -15,7 +15,7 @@ function Home() {
             extraordinary touch of art.
           </div>
           <div className="link">
-            <button>Let's go</button>
+            <button><a href="https://www.google.com/" target="_blank">Let's go</a></button>
           </div>
         </div>
         <div className="card-image">
@@ -35,7 +35,8 @@ function Home() {
             extraordinary touch of art.
           </div>
           <div className="link">
-            <button>Let's go</button>
+          <button><a href="https://www.google.com/" target="_blank">Let's go</a></button>
+
           </div>
         </div>
         <div className="card-image">
