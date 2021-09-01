@@ -1,14 +1,11 @@
 import React from "react";
 import Screenshot1 from "../images/samantha-gades-BlIhVfXbi9s-unsplash.jpg";
+import LinkUrl from "../Components/LinkUrl";
 
 function Home() {
   return (
     <div className="content">
-      <form className="formUrl" action="">
-        {/* <label for="inputLink">Write your link</label> */}
-        <input placeholder="Write your link..." type="text" id="inputLink" />
-        <button className="urlButton">Enter</button>
-      </form>
+      <LinkUrl />
       <div className="textAndImage">
         <div className="card-text">
           <div className="title">

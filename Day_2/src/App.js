@@ -3,6 +3,7 @@ import NotFoundPage from "./Pages/NotFoundPage";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Login from "./Pages/Login";
+import LinkUrl from "./Components/LinkUrl";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import logo from "./images/logoipsum-logo-15.svg";
 
