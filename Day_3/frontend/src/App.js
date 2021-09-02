@@ -8,25 +8,6 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import logo from "./images/logoipsum-logo-15.svg";
 
 function App() {
-  const allLinks = [];
-  fetch("http://localhost:3535/links", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      console.log(data);
-      allLinks.push(data);
-      console.log(allLinks);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-
   return (
     <Router>
       <div className="App-header">
