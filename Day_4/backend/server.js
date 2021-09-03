@@ -31,7 +31,7 @@ const urls = [
   },
 ];
 
-server.get("/links", (req, res) => {
-  res.json(urls);
-});
+// server.get("/links", (req, res) => {
+//   res.json(urls);
+// });
 server.use("/links", router);
