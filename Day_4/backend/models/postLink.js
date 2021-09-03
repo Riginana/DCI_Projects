@@ -24,12 +24,12 @@ const linkSchema = mongoose.Schema(
 
 const Link = mongoose.model("link", linkSchema);
 
-async function create(){
+async function create(link) {
   const newLink = new Link({
-    ...link
+    ...link,
   });
   return await newLink.save();
 }
 module.exports = {
-  create
-}
+  create,
+};
