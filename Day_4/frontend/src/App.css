@@ -1,0 +1,304 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.formUrl {
+  display: flex;
+  flex-direction: column;
+  width: 26rem;
+}
+.formUrl input,
+.formUrl label {
+  padding: 6px;
+  margin: 3px;
+}
+.formUrl input {
+  border: 1px solid lightgray;
+}
+.urlButton {
+  height: 3.5vh;
+  background-color: #58a9a5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 8px 0;
+}
+.App-header header {
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+}
+
+.App-header header ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 8vh;
+}
+
+.App-header header ul li a {
+  color: #58a9a5;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.App-header header ul li a:hover {
+  color: white;
+  background-color: #58a9a5;
+  transition: 0.3s ease-out;
+  border-radius: 5px;
+}
+h1 {
+  text-align: center;
+  margin: 15px;
+}
+
+.logo {
+  display: flex;
+  width: 10%;
+  height: 5vh;
+  align-items: center;
+  margin: auto 10px;
+}
+
+.menu {
+  display: flex;
+  width: 45%;
+  justify-content: space-around;
+}
+.menu ul {
+  justify-content: space-around;
+  width: 100%;
+}
+
+.login {
+  display: flex;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+  transform: translate(0%, 50%);
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  height: 100%;
+  padding: 10px;
+}
+
+.loginForm input,
+.loginForm label,
+.LoginButton {
+  padding: 10px;
+  margin: 5px;
+  font-size: 20px;
+  color: grey;
+  border: none;
+}
+.LoginButton {
+  margin-top: 50px;
+  background-color: #58a9a5;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+
+.loginForm input {
+  border-bottom: 2px solid #58a9a5;
+  background: transparent;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 70vh;
+  margin: 20px auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.textAndImage {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  margin-bottom: 50px;
+  height: 55vh;
+  margin-top: 20px;
+}
+
+.card-text {
+  width: 26rem;
+  height: 26vh;
+  padding: 10px;
+  line-height: 30px;
+  margin: 20px auto;
+}
+.title {
+  width: 100%;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  height: 6vh;
+}
+.text {
+  margin-top: 10px;
+  width: 100%;
+  height: 11vh;
+  text-align: center;
+}
+.link {
+  margin-top: 10px;
+  width: 50%;
+  height: 5vh;
+  margin: 10px auto;
+}
+.link button {
+  height: 100%;
+  width: 100%;
+  background-color: #58a9a5;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+}
+.card-image {
+  margin: 20px auto;
+  width: 26rem;
+  height: 16rem;
+}
+
+.card-image img {
+  width: 100%;
+  height: 16rem;
+  background-image: cover;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (min-width: 800px) {
+  .formUrl {
+    width: 48rem;
+    height: 32vh;
+    justify-content: space-between;
+    margin-bottom: 6vh;
+  }
+
+  .formUrl input,
+  .formUrl label {
+    width: 97%;
+    margin-left: 20px;
+    padding: 2px;
+    font-size: 16px;
+  }
+  .urlButton {
+    width: 20%;
+    margin-top: 5px;
+    margin-left: 20px;
+  }
+  .textAndImage {
+    flex-direction: row;
+    width: 48rem;
+    height: 45vh;
+  }
+  .content {
+    height: 90vh;
+    width: 100%;
+  }
+  .card-text {
+    width: 50%;
+    margin: 0;
+    height: 100%;
+  }
+  .title {
+    font-size: 28px;
+    padding: 0px 10px;
+    text-align: left;
+  }
+  .text {
+    text-align: justify;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  .link {
+    margin-bottom: 0;
+    position: absolute;
+    width: 24rem;
+  }
+  .link button {
+    position: relative;
+    top: 210%;
+    width: 50%;
+    background-color: #58a9a5;
+    justify-content: flex-start;
+  }
+  .link button:hover {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .card-image {
+    width: 50%;
+    margin: 0;
+    height: 100%;
+  }
+
+  .card-image img {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .formUrl {
+    display: flex;
+  }
+
+  .formUrl input,
+  .formUrl label {
+    justify-content: center;
+    margin: 5px auto;
+    width: 100%;
+  }
+  .urlButton {
+    width: 20%;
+    margin: 5px 0;
+  }
+  .textAndImage {
+    flex-direction: row;
+    width: 60rem;
+  }
+  .title {
+    font-size: 33px;
+    line-height: 39px;
+    padding: 0px 15px;
+  }
+  .text {
+    text-align: left;
+    padding: 15px;
+    margin-top: 25px;
+    font-size: 19px;
+    line-height: 35px;
+  }
+
+  .link {
+    margin-left: 15px;
+  }
+  .link button {
+    position: relative;
+    top: 190%;
+    width: 50%;
+
+    background-color: #58a9a5;
+  }
+}
