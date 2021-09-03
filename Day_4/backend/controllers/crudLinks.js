@@ -1,16 +1,19 @@
 const Link = require("../models/postLink");
 
 module.exports = {
-  create: async function (req, res) {
+  create: async function (req, res, next) {
     try {
-      const link = req.body;
-      const newLink = new Link({
-        ...link,
-      });
-      await newLink.save();
+      console.log(req.body);
+
+      const newLink = await Link.create(
+        req.body.url,
+        req.body.title,
+        req.body.explanation,
+        req.body.image,
+      );
       res.json(newLink);
     } catch (err) {
-      res.json(err);
+      next(err);
     }
   },
 };
