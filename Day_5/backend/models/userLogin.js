@@ -17,9 +17,9 @@ const UserLogin = mongoose.Schema(
 
 const User = mongoose.model("User", UserLogin);
 
-async function login({ email, password }) {
+async function login(email, password) {
   const user = await User.findOne({ email: email });
-  console.log(user);
+  console.log(user, email, password);
   if (!user) throw new Error("Email not found!");
   const isPasswordCorrect = bcrypt.compareSync(password, user.password);
   if (!isPasswordCorrect) throw new Error("Password incorrect!");
