@@ -3,7 +3,8 @@ import React, { useState } from "react";
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleUser = () => {
+  const handleUser = (e) => {
+    e.preventDefault();
     fetch("http://localhost:3535/login/user", {
       method: "POST",
       body: JSON.stringify({
@@ -15,13 +16,10 @@ function Login() {
       },
     });
   };
-  console.log(email, password);
-  // function handleSubmit(event) {
-  //   event.preventDefault();
-  // }
+
   return (
     <div className="login">
-      <form className="loginForm" onSubmit={handleUser} action="">
+      <form className="loginForm" onSubmit={handleUser}>
         <label for="email">Email</label>
         <input
           type="email"
